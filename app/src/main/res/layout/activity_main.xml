@@ -5,9 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.activity.MainActivity">
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcvMain"
         android:name="hienle.developer.tpi_mvvm.ui.fragment.attraction_list.AttractionListFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"

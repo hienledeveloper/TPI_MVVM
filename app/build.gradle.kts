@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.android.extensions)
     alias(libs.plugins.kaptAndroid)
     alias(libs.plugins.hiltAndroid)
 }
@@ -53,7 +54,10 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel)
     implementation(libs.androidx.lifecycle.livedata)
     implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.bumptech.glide)
     implementation(libs.dagger.hilt)
+    implementation(libs.androidx.webkit)
     kapt(libs.dagger.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

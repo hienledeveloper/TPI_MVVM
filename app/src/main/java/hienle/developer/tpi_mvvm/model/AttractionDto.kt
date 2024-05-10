@@ -1,13 +1,16 @@
 package hienle.developer.tpi_mvvm.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class AttractionDto(
     @SerializedName("address")
     val address: String? = null,
     @SerializedName("category")
-    val category: List<Category?>? = null,
+    val category: List<CategoryDto>? = null,
     @SerializedName("distric")
     val distric: String? = null,
     @SerializedName("elong")
@@ -18,26 +21,18 @@ data class AttractionDto(
     val facebook: String? = null,
     @SerializedName("fax")
     val fax: String? = null,
-    @SerializedName("files")
-    val files: List<Any?>? = null,
-    @SerializedName("friendly")
-    val friendly: List<Any?>? = null,
     @SerializedName("id")
     val id: Int? = null,
     @SerializedName("images")
-    val images: List<Any?>? = null,
+    val images: List<ImageDto>? = null,
     @SerializedName("introduction")
     val introduction: String? = null,
-    @SerializedName("links")
-    val links: List<Any?>? = null,
     @SerializedName("modified")
     val modified: String? = null,
     @SerializedName("months")
     val months: String? = null,
     @SerializedName("name")
     val name: String? = null,
-    @SerializedName("name_zh")
-    val nameZh: Any? = null,
     @SerializedName("nlat")
     val nlat: Double? = null,
     @SerializedName("official_site")
@@ -48,12 +43,8 @@ data class AttractionDto(
     val openTime: String? = null,
     @SerializedName("remind")
     val remind: String? = null,
-    @SerializedName("service")
-    val service: List<Service?>? = null,
     @SerializedName("staytime")
     val staytime: String? = null,
-    @SerializedName("target")
-    val target: List<Target?>? = null,
     @SerializedName("tel")
     val tel: String? = null,
     @SerializedName("ticket")
@@ -62,4 +53,7 @@ data class AttractionDto(
     val url: String? = null,
     @SerializedName("zipcode")
     val zipcode: String? = null
-)
+) : Parcelable {
+    val imageUrl: String?
+        get() = images?.map { it.imageUrl }?.getOrNull(0)
+}

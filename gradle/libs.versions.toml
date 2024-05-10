@@ -14,6 +14,9 @@ retrofit = "2.9.0"
 lifecycle = "2.7.0"
 fragment = "1.7.0"
 http_log = "4.12.0"
+swiperefreshlayout = "1.2.0-alpha01"
+glide = "4.16.0"
+webkit = "1.11.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,12 +34,16 @@ androidx-fragment = { group = "androidx.fragment", name = "fragment-ktx", versio
 androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle"}
 androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle"}
+androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout"}
+androidx-webkit = { group = "androidx.webkit", name = "webkit", version.ref = "webkit"}
+bumptech-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide"}
 dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt"}
 dagger-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-extensions = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kaptAndroid = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 
